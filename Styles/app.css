@@ -1,0 +1,13 @@
+@charset "UTF-8";
+
+/* CSS */
+
+body {
+  padding-bottom: 70px;
+  }
+
+p#footerPara {
+  color: lightgrey;
+  text-align: center;
+}
+
