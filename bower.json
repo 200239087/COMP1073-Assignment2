@@ -9,7 +9,7 @@
     "JavaScript"
   ],
   "license": "",
-  "homepage": "",
+  "homepage": "https://github.com/200239087/COMP1073-Assignment2",
   "ignore": [
     "**/.*",
     "node_modules",
@@ -22,5 +22,6 @@
     "jquery": "2.2.4",
     "bootstrap": "^3.3.7",
     "font-awesome": "^4.7.0"
-  }
+  },
+  "private": true
 }
