@@ -2,12 +2,18 @@
 
 /* CSS */
 
+/*Ryan Quigley
+200239087
+Georgian College
+COMP1073-W2017*/
+
 body {
   padding-bottom: 70px;
   }
 
-p#footerPara {
+footer > nav > div > p {
   color: lightgrey;
   text-align: center;
+  margin-top: 1em;
 }
 
