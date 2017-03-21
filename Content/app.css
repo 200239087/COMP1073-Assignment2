@@ -9,6 +9,8 @@ COMP1073-W2017*/
 
 body {
   padding-bottom: 70px;
+  text-align: center;
+  background-color: lightgrey;
   }
 
 footer > nav > div > p {
