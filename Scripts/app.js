@@ -13,23 +13,24 @@
   switch (document.title) { // Switch statement to target the different pages with one js file
     case "Bio": { // Targets the page with the title of "Bio"
 
-let ClickButton = document.getElementById("ClickButton");
-ClickButton.addEventListener("click", Click);
+      let data = {};
+        let XHR = new XMLHttpRequest();
+        XHR.open("GET", "./bio.json", true);
+        XHR.send();
+        XHR.onreadystatechange = function () {
+            if ((this.readyState === 4) && (this.status === 200)) {
+                data = JSON.parse(this.responseText);
+            }
+        };
 
-// Objects created from html ids
-let SecondParagraph = document.getElementById("SecondParagraph");
-
-// Content injection strings
-let Content = `I am an advid gamer, I've been playing games since I was very little, 
-                every game I've played has given me plenty of inspiration for writing my story. 
-                I enjoy technology, and I enjoyed learnering how to develop and design.`;
-
-// Clicking the button will show the second paragraph element and hide the button afterwards
-function Click() {
-   SecondParagraph.textContent = Content;
-   ClickButton = document.getElementById("ClickButton").style.visibility = "hidden";
-}
-      
+           XHR.addEventListener("load", function () {
+            let BioContent = document.getElementById("SecondParagraph");
+            data.content.forEach(function(content) {
+              let paragraph = document.createElement("p");
+              paragraph.innerHTML = "\n <p>" + content.paragraph + "</p>\n ";
+              BioContent.appendChild(paragraph);
+            }, this);         
+        });
     }  //End of Bio page
       break;
 
