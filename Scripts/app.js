@@ -2,7 +2,7 @@
 "use strict";
 
 (function () { // Start of IIFE
-
+ 
     // Ryan Quigley
     // 200239087
     // Georgian College
